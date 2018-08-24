@@ -65,8 +65,8 @@ export default {
 
       return watchers
     },
-    validate () {
-      const errors = this.inputs.filter(input => !input.validate(true)).length
+    validate (displayErrors = true) {
+      const errors = this.inputs.filter(input => !input.validate(displayErrors)).length
       return !errors
     },
     reset () {
